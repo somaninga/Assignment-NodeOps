@@ -1,0 +1,28 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.21"
+
+service:
+  type: LoadBalancer
+  port: 443
+
+volumes:
+  - name: config-volume
+    configMap:
+      name: nginx-config
+
+volumeMounts:
+  - name: config-volume
+    mountPath: /etc/nginx/nginx.conf
+    subPath: nginx.conf
+
+controller:
+  service:
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    tls:
+      - hosts:
+          - evm-rpc.nodeopsdemo.com
+        secretName: evm-rpc-tls

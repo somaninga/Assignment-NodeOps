@@ -1,0 +1,48 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+override.tf
+override.tf.json
+terraform.tfvars.json
+*.backup
+.terraform.lock.hcl
+
+# Helm
+*.tgz
+.chart-release/
+helm-charts/**/charts/
+helm-charts/**/tmpcharts/
+helm-charts/**/.helmignore
+helm-charts/**/values.yaml.generated
+
+# Kubernetes & Secrets
+.kube/
+secrets.yaml
+*.pem
+*.crt
+*.key
+
+# Logs & Temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+node_modules/
+.env
+
+# Scripts output
+scripts/*.out
+scripts/*.log
+
+# OS/system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VSCode settings (optional)
+.vscode/

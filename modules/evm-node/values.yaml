@@ -1,0 +1,13 @@
+ethereum:
+  network: mainnet
+  verbosity: 3
+  rpc:
+    enabled: true
+    port: 8545
+    corsOrigins: "*"
+  p2p:
+    port: 30303
+  log:
+    level: "info"
+  cache:
+    size: 4096

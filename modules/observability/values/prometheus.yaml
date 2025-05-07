@@ -1,0 +1,13 @@
+alertmanager:
+  enabled: true
+
+pushgateway:
+  enabled: false
+
+server:
+  persistentVolume:
+    enabled: false
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
